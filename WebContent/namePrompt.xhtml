@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DT
+D XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DT
+D/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+	<title>name prompt</title>
+	<link href="./css/styles.css" rel="stylesheet" type="text/css" />
+</h:head>
+<h:body>
+	<table class="title">
+		<tr>
+			<th>Name prompt</th>
+		</tr>
+	</table>
+	<p />
+	<h2>Please enter your name</h2>
+	<p>Please enter your name</p>
+	<h:form>
+				first name
+				<br />
+		<h:inputText value="#{navigator.firstName}" />
+	</h:form>
+	
+	<p />
+	<h:form>
+				last name
+				<br />
+		<h:inputText value="#{navigator.lastName}" />
+	</h:form>
+	
+	<p />
+	<h:form>
+				Confirm
+				<br />
+		<h:commandButton value="Submit" action="#{navigator.enterName()}" />
+	</h:form>
+
+</h:body>
+</html>
