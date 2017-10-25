@@ -6,7 +6,8 @@ public class WelcomePage extends Page {
 	private final PageOption[] options;
 	
 	public String getMainDescription() {
-		return mainDescription;
+//		Vehicle car = new Car();
+		return mainDescription;//+car.hello();
 	}
 	
 	public WelcomePage(PageOption... pages) {
