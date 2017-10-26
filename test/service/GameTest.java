@@ -6,8 +6,12 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class GameTest {
+import model.PageOption;
 
+public class GameTest {
+	
+	private static Game game = Game.getInstance();
+	
 	@Before
 	public void setUp() throws Exception {
 	}
@@ -18,12 +22,16 @@ public class GameTest {
 
 	@Test
 	public void testGetInstance() {
-		fail("Not yet implemented");
+		Game other = Game.getInstance();
+		assertEquals(game, other);
+		assertNotNull(other);
 	}
 
 	@Test
 	public void testGetMainDescription() {
-		fail("Not yet implemented");
+		assertEquals(game.getMainDescription(), "Welcome Lone Wolf. This is the main description of the game. Make a choice.");
+		game.selectOption(game.getOptions()[0]);
+		assertEquals(game.getMainDescription(), "Welcome to page 2.");
 	}
 
 	@Test
