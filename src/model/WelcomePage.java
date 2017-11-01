@@ -2,16 +2,16 @@ package model;
 
 public class WelcomePage extends Page {
 	
-	private final String mainDescription = "Welcome Lone Wolf. This is the main description of the game. Make a choice.";
 	private final PageOption[] options;
 	
-	public String getMainDescription() {
+//	public String getMainDescription() {
 //		Vehicle car = new Car();
 //		System.out.println(mainDescription +car.hello());
-		return mainDescription;// +car.hello();
-	}
+//		return mainDescription;// +car.hello();
+//	}
 	
 	public WelcomePage(PageOption... pages) {
+		super("Welcome Lone Wolf. This is the main description of the game. Make a choice.");
 //		this.options = new PageOption[pages.length];
 //		for(int i = 0; i<pages.length; i++) 
 //			this.options[i] = new PageOption(pages[i]);
