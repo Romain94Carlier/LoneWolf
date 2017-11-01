@@ -10,23 +10,19 @@ import repository.PageRepository;
 public class Game {
 
 	private static Game instance = new Game();
-	private Page currentPage;
-	@ManagedProperty(value="#{pageRepository}")
-	private PageRepository pageRepo;
+	private PageService pageService = new PageService();
+
 	
 	public static Game getInstance() {
 		return instance;
 	}
 
 	public String getMainDescription() {
-		return currentPage.getMainDescription();
+		return pageService.getMainDescription();
 	}
 	
 	private Game() {
-		currentPage = new WelcomePage(
-				new PageOption(2, "Take left"), 
-				new PageOption(46, "Go straight"), 
-				new PageOption(123, "Take right"));
+		
 	}
 
 //	public String[] getOptionsAsStrings() {
@@ -38,11 +34,11 @@ public class Game {
 //	}
 	
 	public PageOption[] getOptions() {
-		return currentPage.getOptions();
+		return pageService.getOptions();
 	}
 
 	public void selectOption(PageOption pageOption) {
-		this.currentPage = pageRepo.getPageByNumber(pageOption.getPage());
+		pageService.selectOption(pageOption);
 	}
 	
 }
