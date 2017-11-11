@@ -1,8 +1,12 @@
 package repository;
 
-import javax.faces.bean.ApplicationScoped;
-
-@ApplicationScoped
 public class InventoryRepository {
-
+	private static InventoryRepository instance = new InventoryRepository();
+	
+	private InventoryRepository() {
+	}
+	
+	public static InventoryRepository getInstance() {
+		return instance;
+	}
 }

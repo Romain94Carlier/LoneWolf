@@ -12,7 +12,6 @@ public class Game {
 	private static Game instance = new Game();
 	private PageService pageService = new PageService();
 
-	
 	public static Game getInstance() {
 		return instance;
 	}

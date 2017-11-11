@@ -2,17 +2,16 @@ package service;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
+import javax.faces.bean.RequestScoped;
 
 import model.Page;
 import model.PageOption;
 import model.WelcomePage;
 import repository.PageRepository;
 
-@ManagedBean
 public class PageService {
 
 	private Page currentPage;
-	@ManagedProperty(value="#{pageRepository}")
 	private PageRepository pageRepository;
 	
 	public PageService() {
@@ -20,6 +19,7 @@ public class PageService {
 				new PageOption(2, "Take left"), 
 				new PageOption(46, "Go straight"), 
 				new PageOption(123, "Take right"));
+		pageRepository = PageRepository.getInstance();
 	}
 	
 	public String getMainDescription() {
