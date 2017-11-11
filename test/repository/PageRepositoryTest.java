@@ -2,15 +2,20 @@ package repository;
 
 import static org.junit.Assert.*;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import repository.PageRepository;
 
+@ManagedBean
 public class PageRepositoryTest {
 	
-	private static PageRepository pageRepository = new PageRepository();
+	@ManagedProperty(value="#{pageRepository}")
+	private static PageRepository pageRepository;
 
 	@Before
 	public void setUp() throws Exception {
@@ -22,7 +27,7 @@ public class PageRepositoryTest {
 
 	@Test
 	public void testReadFromJson() {
-		
+		assertEquals("stuff", pageRepository.toString());
 	}
 
 }

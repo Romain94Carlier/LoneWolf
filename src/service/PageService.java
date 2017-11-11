@@ -1,5 +1,6 @@
 package service;
 
+import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
 
 import model.Page;
@@ -7,11 +8,12 @@ import model.PageOption;
 import model.WelcomePage;
 import repository.PageRepository;
 
+@ManagedBean
 public class PageService {
 
 	private Page currentPage;
 	@ManagedProperty(value="#{pageRepository}")
-	private PageRepository pageRepo;
+	private PageRepository pageRepository;
 	
 	public PageService() {
 		currentPage = new WelcomePage(
@@ -29,6 +31,10 @@ public class PageService {
 	}
 	
 	public void selectOption(PageOption pageOption) {
-		this.currentPage = pageRepo.getPageByNumber(pageOption.getPage());
+		this.currentPage = pageRepository.getPageByNumber(pageOption.getPage());
+	}
+	
+	public void setPageRepository(PageRepository pageRepository) {
+		this.pageRepository = pageRepository;
 	}
 }

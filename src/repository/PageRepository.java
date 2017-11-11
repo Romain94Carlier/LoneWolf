@@ -1,8 +1,6 @@
 package repository;
 
-import java.io.BufferedReader;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -10,6 +8,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.annotation.PostConstruct;
 import javax.faces.bean.ApplicationScoped;
 
 import model.Page;
@@ -20,6 +19,10 @@ public class PageRepository {
 	private List<Page> pages = new ArrayList<Page>();
 	
 	public PageRepository() {
+	}
+	
+	@PostConstruct
+	public void init() {
 		readPageFromJson("resources/Page1");
 	}
 	
