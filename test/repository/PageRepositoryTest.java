@@ -20,6 +20,7 @@ public class PageRepositoryTest {
 
 	@Test
 	public void testReadFromJson() {
+		pageRepository.readPageFromJson("resources/Page1.json");
 	}
 
 }
