@@ -1,12 +1,17 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
 
 public /*abstract*/ class Page {
 	
 	private String description;
+//	private List<PageOption> options = new ArrayList<>();
+	private PageOption[] options;
 
-	public Page(String description) {
+	public Page(String description, PageOption... options) {
 		this.description = description;
+		this.options = options;
 	}
 	
 	public String getMainDescription() {
@@ -14,6 +19,6 @@ public /*abstract*/ class Page {
 	}
 
 	public PageOption[] getOptions() {
-		return null;
+		return this.options;
 	}
 }

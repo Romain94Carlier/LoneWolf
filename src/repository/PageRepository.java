@@ -1,10 +1,6 @@
 package repository;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.NoSuchFileException;
@@ -19,6 +15,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import model.Page;
+import model.PageOption;
 
 //import javax.json.Json;
 //import javax.json.JsonArray;
@@ -28,7 +25,7 @@ import model.Page;
 @ApplicationScoped
 public class PageRepository {
 	
-	private List<Page> pages = new ArrayList<Page>();
+	private Page[] pages = new Page[400];
 	private static PageRepository instance = new PageRepository();
 	private String projectFolder = "C:/Users/User/git/LoneWolf/";
 	
@@ -41,7 +38,7 @@ public class PageRepository {
 	}
 	
 	public Page getPageByNumber(int number) {
-		return null;
+		return pages[number];
 	}
 	
 	public void readPageFromJson(String uri) {
@@ -59,8 +56,8 @@ public class PageRepository {
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 
-		File jsonInputFile = new File(projectFolder+uri);
-        InputStream is;
+//		File jsonInputFile = new File(projectFolder+uri);
+//        InputStream is;
         try {
 //            is = new FileInputStream(jsonInputFile);
             // Create JsonReader from Json.
@@ -68,14 +65,19 @@ public class PageRepository {
             // Get the JsonObject structure from JsonReader.
             JSONObject root = new JSONObject(stringContent);
 
-//            reader.close();
-            // read string data
-            System.out.println("Page number: " + root.getInt("pageNumber"));
-            // read integer data
-            System.out.println("Main description: " + root.getString("mainDescription"));
+            int pageNumber = root.getInt("pageNumber");
+            System.out.println("Page number: " + pageNumber);
+            String description = root.getString("mainDescription");
+            System.out.println("Main description: " + description);
             // read inner json element
             JSONArray optionsObj = root.getJSONArray("pageOptions");
-            System.out.println("Option 1 description: " + optionsObj.getJSONObject(1).getString("pageOptionDescription"));
+            PageOption[] options = new PageOption[optionsObj.length()];
+            for(int i = 0; i < optionsObj.length(); i++) {
+            	JSONObject optionObj = optionsObj.getJSONObject(i);
+            	options[i] = new PageOption(optionObj.getInt("pageOptionNumber"), optionObj.getString("pageOptionDescription"));
+            }
+//            pages.add(new Page(description, options));
+            pages[pageNumber] = new Page(description, options);
         } catch (JSONException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
