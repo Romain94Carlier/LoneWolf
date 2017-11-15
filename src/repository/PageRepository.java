@@ -28,7 +28,7 @@ public class PageRepository {
 	private String projectFolder = "C:/Users/User/git/LoneWolf/";
 	
 	private PageRepository() {
-		readPageFromJson("resources/Page1.json");
+		readPageFromJson("src/resources/Page1.json");
 	}
 	
 	public static PageRepository getInstance() {
