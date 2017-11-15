@@ -1,0 +1,15 @@
+service\FightService.class
+service\InventoryService.class
+service\PageService.class
+model\Page.class
+model\Vehicle.class
+model\InventoryItem.class
+model\WelcomePage.class
+model\Car.class
+repository\InventoryRepository.class
+repository\PageRepository.class
+model\Weapon.class
+controller\Navigator.class
+controller\Director.class
+service\Game.class
+model\PageOption.class

@@ -1,10 +1,10 @@
 package model;
 
-public abstract class Weapon extends InventoryItem {
+public class Weapon extends InventoryItem {
 	
 	private int damage;
 	
-	protected Weapon(int damage) {
+	public Weapon(String name, int damage) { //protected if abstract
 		this.damage = damage;
 	}
 

@@ -1,11 +1,6 @@
 package service;
 
-import javax.faces.bean.ManagedProperty;
-
-import model.Page;
 import model.PageOption;
-import model.WelcomePage;
-import repository.PageRepository;
 
 public class Game {
 

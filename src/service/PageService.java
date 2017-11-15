@@ -30,7 +30,7 @@ public class PageService {
 		this.currentPage = pageRepository.getPageByNumber(pageOption.getPage());
 	}
 	
-	public void setPageRepository(PageRepository pageRepository) {
-		this.pageRepository = pageRepository;
-	}
+//	public void setPageRepository(PageRepository pageRepository) {
+//		this.pageRepository = pageRepository;
+//	}
 }
