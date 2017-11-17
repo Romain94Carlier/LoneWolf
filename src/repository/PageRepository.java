@@ -29,6 +29,7 @@ public class PageRepository {
 	
 	private PageRepository() {
 		readPageFromJson("src/resources/Page1.json");
+		readPageFromJson("src/resources/Page54.json");
 	}
 	
 	public static PageRepository getInstance() {
