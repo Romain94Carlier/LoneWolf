@@ -21,4 +21,9 @@ public class Director {
 		return game.getOptions();
 	}
 	
+	public String selectOption(PageOption option) {
+		game.selectOption(option);
+		return "welcome"; // refresh
+	}
+	
 }

@@ -32,7 +32,7 @@ D/xhtml1-transitional.dtd">
 				<c:forEach items="#{director.getOptions()}" var="option"
 					varStatus="metadata">
 					<td><h:form>
-							<h:commandButton value="#{option.getPage()}" action="welcome" />
+							<h:commandButton value="#{option.getPage()}" action="#{director.selectOption(option)}" />
 						</h:form></td>
 				</c:forEach>
 			</tr>
