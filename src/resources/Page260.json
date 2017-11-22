@@ -1,0 +1,13 @@
+{
+   "pageNumber" : 260,
+   "mainDescription": "Voyant que sa flèche ne vous a pas tué, le Centaure se dresse sur ses pattes arrières et fonce sur vous au grand galop. Vous faites un bond en arrière pour éviter d'être renversé, et la créature passe devant vous dans un nuage de poussière avant de s'arrêter dix mètres plus loin sur le chemin d'où vous êtes venu. Ce n'est peut-être pas une si bonne idée de vouloir combattre le Centaure et vous remettez votre épée au fourneau en décidant de traverser la rivière à pied.",
+   "pageOptions": [
+         {
+              "pageOptionNumber": 178,
+              "pageOptionDescription": "Rendez-vous au"
+         }
+    ],
+	"monsters": [],
+	"itemsFound": [],
+	"itemsToBuy": []
+}

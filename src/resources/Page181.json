@@ -1,0 +1,19 @@
+{
+   "pageNumber" : 181,
+   "mainDescription": "Vous suivez les marches et vous traversez la chute d'eau pour entrer dans une vaste caverne ; les marches contournent un bassin d'eau stagnante. De l'autre côté du bassin, vous trouvez une table et une chaise de pierre. En vous approchant de la table, vous voyez des déchets de poisson abandonnés là et, soudain, vous entendez derrière vous un bruit d'eau. Une étrange créature armée d'un trident surgit alors du bassin et s'avance vers vous. Elle a les jambes d'un homme, mais sa tête et son torse ressemblent au corps d'un gros poisson vert aux yeux globuleux. Ses bras ont également quelque chose d'humain, bien qu'ils soient recouverts d'écailles. Il s'agit d'un HOMME-POISSON et il vous faut le combattre.",
+   "pageOptions": [
+         {
+              "pageOptionNumber": 162,
+              "pageOptionDescription": "Si vous êtes vainqueur, rendez-vous au"
+         }
+    ],
+	"monsters": [
+		{
+			"name": "Homme-Poisson",
+			"skill": 7,
+			"stamina": 6,
+		}
+	],
+	"itemsFound": [],
+	"itemsToBuy": []
+}
