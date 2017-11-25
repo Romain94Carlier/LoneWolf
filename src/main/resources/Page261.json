@@ -1,0 +1,82 @@
+{
+   "pageNumber" : 261,
+   "mainDescription": "Vous suivez le vieil homme vêtu d'une longue robe en haillons. Il souffle et halète en montant l'escalier en colimaçon qui mène à une grande pièce, au sommet de la tour. Des étagères, des armoires et des vitrines s'alignent le long des murs, toutes remplies de flacons, de bocaux, d'armes, de cuirasses et de toutes sortes d'objets à l'aspect étrange. Yaztromo traverse ce bric-à-brac en traînant les pieds et se laisse tomber sur une vieille chaise en bois de chêne. Il glisse alors la main dans une poche, sur sa poitrine, et en sort une petite paire de lunettes cerclées d'or qu'il pose sur son nez. Puis il prend une ardoise et un morceau de craie sur une table et se met à écrire fébrilement. Il vous tend ensuite l'ardoise que vous lisez attentivement.\r\n \r\n Articles Disponibles       Prix\r\n Le Mage vous précise que le mode d'emploi de chaque article est clairement expliqué sur une étiquette qui lui est attachée; on peut également y lire des suggestions concernant les circonstances dans lesquelles il est conseillée d'en faire usage. Yaztromo pousse un soupir et vous signale que, malheureusement, chacun de ces objets magiques ne peut être utilisé qu'une seule fois; il ajoute cependant qu'à ce prix-là, vous ne trouverai rien de meilleur sur le marché.\r\n Si vous décidez d'acheter l'un quelconque (ou plusieurs) de ces objets, vous devrez en payer le prix: de votre capital sera déduit autant de Pièces d'Or qu'il vous en aura coûté, et chacune de vos acquisitions est affichée dans votre Feuille d'Aventure sous la rubrique appropriée. Yaztromo vous demande alors pourquoi vous voulez lui acheter ces objets, et vous lui racontez votre histoire en lui expliquant que vous avez pris la décision de poursuivre la mission de l'infortuné Gromollet. << Ah oui, en effet, répond Yaztromo d'une voix douce. J'ai entendu dire que les bons nains de Pont-de-Pierre avaient perdu leur légendaire marteau de guerre. Et sans lui, leur roi ne peut lever le peuple pour défendre le village menacé par les Trolls des Collines. Selon la rumeur, le roi d'un autre village de nains, agissant par jalousie, a envoyé un aigle à Pont-de-Pierre pour y voler le marteau, et le rapace a réussi son coup. Mais en revenant vers la Forêt des Ténèbres, il a été attaqué en plein vol par des Faucons de la Mort et le marteau est tombé dans les bois où l'on a perdu sa trace. D'après ce que l'on sait, deux Gobelins l'ont trouvé et n'ont pas réussi à se mettre d'accord pour savoir qui allait le garder. Ils se sont battus pendant des heures à ce sujet; mais comme aucun des deux ne parvenait à vaincre l'autre, ils ont fini par abandonner. C'est alors qu'ils ont découvert qu'on pouvait dévisser la tête du marteau de son manche, et la dispute a été aussitôt réglée: l'un des Gobelins a gardé la tête du marteau et l'autre, le manche. Puis ils sont repartis chacun de son côté, tout heureux d'emporter leur trésor. Qui sait s'ils ont conservé leur trouvaille? Nul ne peut l'affirmer, et j'ai bien peur que vos recherches en soient rendues plus difficiles encore. Tout ce que je peux vous dire c'est que la tête est en bronze et le manche en ébène poli. Sachez aussi que la lettre G est gravée à la fois sur la tête et sur le manche. Mais, croyez-moi, votre tâche n'est guère aisée. Enfin, bonne chance, malgré tout... >>\r\n Vous remerciez Yaztromo et vous quittez la pièce en redescendant l'escalier en colimaçon.",
+   "pageOptions": [
+         {
+              "pageOptionNumber": 177,
+              "pageOptionDescription": "Rendez-vous au"
+         }
+    ],
+	"monsters": [],
+	"itemsFound": [],
+	"itemsToBuy": [
+		{
+			"description": "Potion de Guérison",
+			"price": 3
+		},
+		{
+			"description": "Potion de Contrôle des Plantes",
+			"price": 2
+		},
+		{
+			"description": "Potion de Tranquilité",
+			"price": 3
+		},
+		{
+			"description": "Potion de Contrôle des Insectes",
+			"price": 2
+		},
+		{
+			"description": "Potion Antipoison",
+			"price": 2
+		},
+		{
+			"description": "Eau Bénite",
+			"price": 3
+		},
+		{
+			"description": "Anneau de Lumière",
+			"price": 3
+		},
+		{
+			"description": "Bottes à Bondir",
+			"price": 2
+		},
+		{
+			"description": "Corde Magique",
+			"price": 3
+		},
+		{
+			"description": "Filet de Capture",
+			"price": 3
+		},
+		{
+			"description": "Brassard de Force",
+			"price": 3
+		},
+		{
+			"description": "Gant d'Adresse au Lancer",
+			"price": 2
+		},
+		{
+			"description": "Perche à Sonder",
+			"price": 2
+		},
+		{
+			"description": "Gousses d'Ail",
+			"price": 2
+		},
+		{
+			"description": "Bandeau de Concentration",
+			"price": 3
+		},
+		{
+			"description": "Capsules de Feu",
+			"price": 3
+		},
+		{
+			"description": "Filtres à Nez",
+			"price": 3
+		}
+		]
+}

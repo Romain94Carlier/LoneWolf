@@ -4,7 +4,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import repository.PageRepository;
+import main.java.repository.PageRepository;
 
 public class PageRepositoryTest {
 	
