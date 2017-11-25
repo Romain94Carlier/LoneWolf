@@ -1,0 +1,20 @@
+{
+   "pageNumber" : 54,
+   "mainDescription": "Tout là-haut dans le ciel, vous voyez voler une énorme créature beaucoup plus grande que n'importe quel oiseau. La créature descend sur vous et vous tirez votre épée. Elle pousse de grands cris et vous distinguez bientôt sa longue tête à la gueule hérissée de dents pointues. Elle a la peau verdâtre d'un reptile, et ses ailes déployées ont une envergure d'au moins cinq mètres. Il n'y a aucun abri possible au fond de cette vallée et vous allez devoir affronter ce PTERODACTYLE qui fond sur vous.",
+   "pageOptions": [
+         {
+              "pageOptionNumber": 247,
+              "pageOptionDescription": "Si vous êtes vainqueur, rendez-vous au "
+         }
+    ],
+	"monsters": [
+		{
+			"name": "Ptérodactyle",
+			"skill": 7,
+			"stamina": 8,
+			"description": ""
+		}
+	],
+	"itemsFound": [],
+	"itemsToBuy": []
+}
