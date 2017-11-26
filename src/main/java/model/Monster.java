@@ -4,8 +4,8 @@ public class Monster extends Creature {
 	
 	private boolean flee;
 	
-	public Monster(int health, int strength, boolean flee) {
-		super(health, strength);
+	public Monster(String name, String description, int health, int strength, boolean flee) {
+		super(name, description, health, strength);
 		this.flee = flee;
 	}
 	

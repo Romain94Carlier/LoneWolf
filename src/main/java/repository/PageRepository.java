@@ -13,6 +13,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import main.java.model.Monster;
 import main.java.model.Page;
 import main.java.model.PageOption;
 
@@ -69,16 +70,31 @@ public class PageRepository {
 
 			int pageNumber = root.getInt("pageNumber");
 			System.out.println("Page number: " + pageNumber);
+			
 			String description = root.getString("mainDescription");
 			System.out.println("Main description: " + description);
-			// read inner json element
+
 			JSONArray optionsObj = root.getJSONArray("pageOptions");
 			PageOption[] options = new PageOption[optionsObj.length()];
 			for(int i = 0; i < optionsObj.length(); i++) {
 				JSONObject optionObj = optionsObj.getJSONObject(i);
 				options[i] = new PageOption(optionObj.getInt("pageOptionNumber"), optionObj.getString("pageOptionDescription"));
 			}
-			//            pages.add(new Page(description, options));
+			
+			JSONArray monstersObj = root.getJSONArray("monsters");
+			Monster[] monsters = new Monster[monstersObj.length()];
+			for(int i = 0; i < monstersObj.length(); i++) {
+				JSONObject monsterObj = monstersObj.getJSONObject(i);
+				monsters[i] = new Monster(monsterObj.getInt("pageOptionNumber"), monsterObj.getString("pageOptionDescription"));
+			}
+			
+			JSONArray optionsObj = root.getJSONArray("pageOptions");
+			PageOption[] options = new PageOption[optionsObj.length()];
+			for(int i = 0; i < optionsObj.length(); i++) {
+				JSONObject optionObj = optionsObj.getJSONObject(i);
+				options[i] = new PageOption(optionObj.getInt("pageOptionNumber"), optionObj.getString("pageOptionDescription"));
+			}
+			
 			pages[pageNumber] = new Page(description, options);
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
