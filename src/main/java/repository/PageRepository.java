@@ -13,6 +13,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import main.java.model.InventoryItem;
 import main.java.model.Monster;
 import main.java.model.Page;
 import main.java.model.PageOption;
@@ -72,7 +73,7 @@ public class PageRepository {
 			System.out.println("Page number: " + pageNumber);
 			
 			String description = root.getString("mainDescription");
-			System.out.println("Main description: " + description);
+//			System.out.println("Main description: " + description);
 
 			JSONArray optionsObj = root.getJSONArray("pageOptions");
 			PageOption[] options = new PageOption[optionsObj.length()];
@@ -85,17 +86,25 @@ public class PageRepository {
 			Monster[] monsters = new Monster[monstersObj.length()];
 			for(int i = 0; i < monstersObj.length(); i++) {
 				JSONObject monsterObj = monstersObj.getJSONObject(i);
-				monsters[i] = new Monster(monsterObj.getInt("pageOptionNumber"), monsterObj.getString("pageOptionDescription"));
+				monsters[i] = new Monster(monsterObj.getString("name"), monsterObj.getString("description"), monsterObj.getInt("stamina"), monsterObj.getInt("skill"), monsterObj.getBoolean("flee"));
 			}
 			
-			JSONArray optionsObj = root.getJSONArray("pageOptions");
-			PageOption[] options = new PageOption[optionsObj.length()];
-			for(int i = 0; i < optionsObj.length(); i++) {
-				JSONObject optionObj = optionsObj.getJSONObject(i);
-				options[i] = new PageOption(optionObj.getInt("pageOptionNumber"), optionObj.getString("pageOptionDescription"));
+			JSONArray itemsFoundObj = root.getJSONArray("monsters");
+			InventoryItem[] itemsFound = new Monster[itemsFoundObj.length()];
+			for(int i = 0; i < monstersObj.length(); i++) {
+				JSONObject itemFoundObj = itemsFoundObj.getJSONObject(i);
+				itemsFound[i] = new InventoryItem() {
+				};(monsterObj.getString("name"), itemFoundObj.getString("description"), itemFoundObj.getInt("stamina"));
 			}
 			
-			pages[pageNumber] = new Page(description, options);
+			JSONArray monstersObj = root.getJSONArray("monsters");
+			Monster[] monsters = new Monster[monstersObj.length()];
+			for(int i = 0; i < monstersObj.length(); i++) {
+				JSONObject monsterObj = monstersObj.getJSONObject(i);
+				monsters[i] = new Monster(monsterObj.getString("name"), monsterObj.getString("description"), monsterObj.getInt("stamina"), monsterObj.getInt("skill"), monsterObj.getBoolean("flee"));
+			}
+			
+			pages[pageNumber] = new Page(description, monsters, options);
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

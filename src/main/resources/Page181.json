@@ -12,7 +12,8 @@
 			"name": "Homme-Poisson",
 			"skill": 7,
 			"stamina": 6,
-			"description": "Une étrange créature armée d'un trident surgit alors du bassin et s'avance vers vous."
+			"description": "Une étrange créature armée d'un trident surgit alors du bassin et s'avance vers vous.",
+			"flee": "false"
 		}
 	],
 	"itemsFound": [],

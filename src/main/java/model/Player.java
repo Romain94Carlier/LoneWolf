@@ -8,7 +8,7 @@ public class Player extends Creature {
 	private final int luckMax;
 	
 	public Player(int stamina, int skill, int luck) {
-		super(stamina, skill);
+		super("Player", "You are the hero of this story", stamina, skill);
 		this.luck = luck;
 		this.skillMax = skill;
 		this.staminaMax = stamina;
