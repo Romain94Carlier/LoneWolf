@@ -14,15 +14,15 @@ public class Director {
 	}
 
 	public String getMainDescription() {
-		return game.getMainDescription();
+		return Game.getInstance().getMainDescription();
 	}
 	
 	public PageOption[] getOptions() {
-		return game.getOptions();
+		return Game.getInstance().getOptions();
 	}
 	
 	public String selectOption(PageOption option) {
-		game.selectOption(option);
+		Game.getInstance().selectOption(option);
 		return "welcome"; // refresh
 	}
 	

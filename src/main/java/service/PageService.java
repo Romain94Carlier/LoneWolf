@@ -23,11 +23,17 @@ public class PageService {
 	}
 	
 	public PageOption[] getOptions() {
-		return currentPage.getOptions();
+		try {
+			return currentPage.getOptions();
+		} catch (NullPointerException npe) {
+			throw new NullPointerException("Current page: "+currentPage);
+		}
 	}
 	
 	public void selectOption(PageOption pageOption) {
 		this.currentPage = pageRepository.getPageByNumber(pageOption.getPage());
+		if(currentPage == null)
+			throw new NullPointerException("Current page: "+currentPage+". You probably tried loading a page that doesn't exist yet.");
 	}
 	
 //	public void setPageRepository(PageRepository pageRepository) {
