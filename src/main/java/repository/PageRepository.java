@@ -30,10 +30,11 @@ public class PageRepository {
 	private Page[] pages = new Page[400];
 	private static PageRepository instance = new PageRepository();
 	private String projectFolder = "C:/Users/User/git/LoneWolf/";
+	private int[] supportedPages = {1, 54, 181, 260, 261, 303, 399};
 
 	private PageRepository() {
-		readPageFromJson("./src/main/resources/Page1.json");
-		readPageFromJson("./src/main/resources/Page54.json");
+		for(int i : supportedPages)
+			readPageFromJson("./src/main/resources/Page"+i+".json");
 	}
 
 	public static PageRepository getInstance() {
