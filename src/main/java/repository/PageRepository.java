@@ -14,6 +14,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import main.java.model.InventoryItem;
+import main.java.model.InventoryItemFactory;
 import main.java.model.Monster;
 import main.java.model.Page;
 import main.java.model.PageOption;
@@ -89,19 +90,18 @@ public class PageRepository {
 				monsters[i] = new Monster(monsterObj.getString("name"), monsterObj.getString("description"), monsterObj.getInt("stamina"), monsterObj.getInt("skill"), monsterObj.getBoolean("flee"));
 			}
 			
-			JSONArray itemsFoundObj = root.getJSONArray("monsters");
-			InventoryItem[] itemsFound = new Monster[itemsFoundObj.length()];
-			for(int i = 0; i < monstersObj.length(); i++) {
+			JSONArray itemsFoundObj = root.getJSONArray("itemsFound");
+			InventoryItem[] itemsFound = new InventoryItem[itemsFoundObj.length()];
+			for(int i = 0; i < itemsFoundObj.length(); i++) {
 				JSONObject itemFoundObj = itemsFoundObj.getJSONObject(i);
-				itemsFound[i] = new InventoryItem() {
-				};(monsterObj.getString("name"), itemFoundObj.getString("description"), itemFoundObj.getInt("stamina"));
+				itemsFound[i] = InventoryItemFactory.createInventoryItemBuilder().name(itemFoundObj.getString("name")).description(itemFoundObj.getString("description")).build();
 			}
 			
-			JSONArray monstersObj = root.getJSONArray("monsters");
-			Monster[] monsters = new Monster[monstersObj.length()];
-			for(int i = 0; i < monstersObj.length(); i++) {
-				JSONObject monsterObj = monstersObj.getJSONObject(i);
-				monsters[i] = new Monster(monsterObj.getString("name"), monsterObj.getString("description"), monsterObj.getInt("stamina"), monsterObj.getInt("skill"), monsterObj.getBoolean("flee"));
+			JSONArray itemsToBuyObj = root.getJSONArray("monsters");
+			InventoryItem[] itemsToBuy = new InventoryItem[itemsToBuyObj.length()];
+			for(int i = 0; i < itemsToBuyObj.length(); i++) {
+				JSONObject itemToBuy = itemsToBuyObj.getJSONObject(i);
+				itemsToBuy[i] = InventoryItemFactory.createInventoryItemBuilder().name(itemToBuy.getString("name")).description(itemToBuy.getString("description")).price(itemToBuy.getInt("price")).build();
 			}
 			
 			pages[pageNumber] = new Page(description, monsters, options);
