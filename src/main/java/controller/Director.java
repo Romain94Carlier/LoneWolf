@@ -13,6 +13,10 @@ public class Director {
 		return "a";
 	}
 
+	public int getPageNumber() {
+		return Game.getInstance().getPageNumber();
+	}
+	
 	public String getMainDescription() {
 		return Game.getInstance().getMainDescription();
 	}

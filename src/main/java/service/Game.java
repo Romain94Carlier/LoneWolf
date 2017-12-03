@@ -61,4 +61,8 @@ public class Game {
 		pageService.selectOption(pageOption);
 	}
 
+	public int getPageNumber() {
+		return pageService.getPageNumber();
+	}
+
 }

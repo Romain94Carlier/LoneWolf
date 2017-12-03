@@ -105,7 +105,7 @@ public class PageRepository {
 				itemsToBuy[i] = InventoryItemFactory.createInventoryItemBuilder().name(itemToBuy.getString("name")).description(itemToBuy.getString("description")).price(itemToBuy.getInt("price")).build();
 			}
 			
-			pages[pageNumber] = new Page(description, monsters, options);
+			pages[pageNumber] = new Page(pageNumber, description, monsters, options);
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -35,6 +35,10 @@ public class PageService {
 		if(currentPage == null)
 			throw new NullPointerException("Current page: "+currentPage+". You probably tried loading a page that doesn't exist yet.");
 	}
+
+	public int getPageNumber() {
+		return currentPage.getNumber();
+	}
 	
 //	public void setPageRepository(PageRepository pageRepository) {
 //		this.pageRepository = pageRepository;
