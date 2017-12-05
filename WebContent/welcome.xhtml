@@ -24,15 +24,14 @@ function w3_close() {
 }
 </script>
 	<!-- Sidebar -->
-	<div class="w3-sidebar w3-bar-block w3-border-right"
+	<div class="w3-sidebar-right w3-bar-block w3-border-right"
 		style="display: none" id="mySidebar">
 		<button onclick="w3_close()" class="w3-bar-item w3-large">Close
 			&times;</button>
-		<a href="#" class="w3-bar-item w3-button">Link 1</a> <a href="#"
-			class="w3-bar-item w3-button">Link 2</a> <a href="#"
-			class="w3-bar-item w3-button">Link 3</a>
+		<a href="#" class="w3-bar-item w3-button">Link 1</a>
 		<c:forEach items="#{director.getOptions()}" var="option">
-			<option value="#{option.getDescription()}">#{option.getDescription()}</option>
+		
+			<option value="#{option.getDescription()}" class="w3-bar-item w3-button">#{option.getDescription()}</option>
 		</c:forEach>
 	</div>
 
