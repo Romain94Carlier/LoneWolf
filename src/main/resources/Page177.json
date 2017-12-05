@@ -1,0 +1,17 @@
+{
+   "pageNumber" : 177,
+   "mainDescription": 	"Dehors, à la lumière du plein jour, vous remarquez à nouveau ce silence mortel. Un étroit sentier mène vers le nord, s'éloignant des hautes herbes qui entourent la maison de Yaztromo pour s'enfoncer dans la végétation touffue de la Forêt des Ténèbres. Vous avez à peine fait quelques pas que vous vous retrouvez cerné par l'obscurité de cette forêt inextricable ; des pierres et des racines noueuses semblent se cacher dans l'ombre, et vous pourriez presque croire qu'elles cherchent à vous faire trébucher. La lumière du soleil s'efface bientôt complètement et l'atmosphère devient humide et déplaisante. Vous avancez de plus en plus profondément dans les ténèbres et le chemin finit par se diviser en deux autres sentiers, de part et d'autre d'un grand vieil arbre.",
+    "pageOptions": [
+         {
+              "pageOptionNumber": 289,
+              "pageOptionDescription": "Si vous voulez aller vers l'ouest, rendez-vous au "
+         },
+         {
+              "pageOptionNumber": 160,
+              "pageOptionDescription": "Si vous préférez aller à l'est, rendez-vous au "
+         }
+    ],
+	"monsters": [],
+	"itemsFound": [],
+	"itemsToBuy": []
+}

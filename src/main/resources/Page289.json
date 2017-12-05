@@ -1,0 +1,17 @@
+{
+   "pageNumber" : 289,
+   "mainDescription": 	"Le sentier étroit et recouvert de végétation continue à serpenter parmi les arbres touffus de la forêt. D'étranges cris d'animaux retentissent dans les feuillages. Vous arrivez bientôt à une autre bifurcation.",
+    "pageOptions": [
+         {
+              "pageOptionNumber": 76,
+              "pageOptionDescription": "Si vous souhaitez poursuivre vers l'ouest, rendez-vous au "
+         },
+         {
+              "pageOptionNumber": 147,
+              "pageOptionDescription": "Si vous préférez prendre la direction du nord, rendez-vous au "
+         }
+    ],
+	"monsters": [],
+	"itemsFound": [],
+	"itemsToBuy": []
+}
