@@ -16,17 +16,33 @@ D/xhtml1-transitional.dtd">
 <!-- </style> -->
 <h:body>
 	<script>
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
+function openInventory() {
+    document.getElementById("inventorySidebar").style.display = "block";
 }
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
+function closeInventory() {
+    document.getElementById("inventorySidebar").style.display = "none";
+}
+function openShop() {
+    document.getElementById("shopSidebar").style.display = "block";
+}
+function closeShop() {
+    document.getElementById("shopSidebar").style.display = "none";
 }
 </script>
 	<!-- Sidebar -->
+	<div class="w3-sidebar-left w3-bar-block w3-border-right"
+		style="display: none" id="inventorySidebar">
+		<button onclick="closeInventory()" class="w3-bar-item w3-large">Close
+			&times;</button>
+		<a href="#" class="w3-bar-item w3-button">Link 1</a>
+		<c:forEach items="#{director.getOptions()}" var="option">
+		
+			<option value="#{option.getDescription()}" class="w3-bar-item w3-button">#{option.getDescription()}</option>
+		</c:forEach>
+	</div>
 	<div class="w3-sidebar-right w3-bar-block w3-border-right"
-		style="display: none" id="mySidebar">
-		<button onclick="w3_close()" class="w3-bar-item w3-large">Close
+		style="display: none" id="shopSidebar">
+		<button onclick="closeShop()" class="w3-bar-item w3-large">Close
 			&times;</button>
 		<a href="#" class="w3-bar-item w3-button">Link 1</a>
 		<c:forEach items="#{director.getOptions()}" var="option">
@@ -48,7 +64,11 @@ function w3_close() {
 	<p />
 	<div>
 		Inventory
-		<button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button>
+		<button class="w3-button w3-teal w3-xlarge" onclick="openInventory()">☰</button>
+	</div>
+	<div>
+		Item shop
+		<button class="w3-button w3-teal w3-xlarge" onclick="openShop()">☰</button>
 	</div>
 
 	</header> <!-- 		</table> --> <!-- 	<p /> --> <nav class="nav">
