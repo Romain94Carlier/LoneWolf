@@ -98,7 +98,7 @@ public class PageRepository {
 				itemsFound[i] = InventoryItemFactory.createInventoryItemBuilder().name(itemFoundObj.getString("name")).description(itemFoundObj.getString("description")).build();
 			}
 			
-			JSONArray itemsToBuyObj = root.getJSONArray("monsters");
+			JSONArray itemsToBuyObj = root.getJSONArray("itemsToBuy");
 			InventoryItem[] itemsToBuy = new InventoryItem[itemsToBuyObj.length()];
 			for(int i = 0; i < itemsToBuyObj.length(); i++) {
 				JSONObject itemToBuy = itemsToBuyObj.getJSONObject(i);

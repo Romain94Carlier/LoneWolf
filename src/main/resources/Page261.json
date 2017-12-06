@@ -11,70 +11,87 @@
 	"itemsFound": [],
 	"itemsToBuy": [
 		{
+			"name": "Potion de Guérison",
 			"description": "Potion de Guérison",
 			"price": 3
 		},
 		{
+			"name": "Potion de Contrôle des Plantes",
 			"description": "Potion de Contrôle des Plantes",
 			"price": 2
 		},
 		{
+			"name": "Potion de Tranquilité",
 			"description": "Potion de Tranquilité",
 			"price": 3
 		},
 		{
+			"name": "Potion de Contrôle des Insectes",
 			"description": "Potion de Contrôle des Insectes",
 			"price": 2
 		},
 		{
+			"name": "Potion Antipoison",
 			"description": "Potion Antipoison",
 			"price": 2
 		},
 		{
+			"name": "Eau Bénite",
 			"description": "Eau Bénite",
 			"price": 3
 		},
 		{
+			"name": "Anneau de Lumière",
 			"description": "Anneau de Lumière",
 			"price": 3
 		},
 		{
+			"name": "Bottes à Bondir",
 			"description": "Bottes à Bondir",
 			"price": 2
 		},
 		{
+			"name": "Corde Magique",
 			"description": "Corde Magique",
 			"price": 3
 		},
 		{
+			"name": "Filet de Capture",
 			"description": "Filet de Capture",
 			"price": 3
 		},
 		{
+			"name": "Brassard de Force",
 			"description": "Brassard de Force",
 			"price": 3
 		},
 		{
+			"name": "Gant d'Adresse au Lancer",
 			"description": "Gant d'Adresse au Lancer",
 			"price": 2
 		},
 		{
+			"name": "Perche à Sonder",
 			"description": "Perche à Sonder",
 			"price": 2
 		},
 		{
+			"name": "Gousses d'Ail",
 			"description": "Gousses d'Ail",
 			"price": 2
 		},
 		{
+			"name": "Bandeau de Concentration",
 			"description": "Bandeau de Concentration",
 			"price": 3
 		},
 		{
+			"name": "Capsules de Feu",
 			"description": "Capsules de Feu",
 			"price": 3
 		},
 		{
+			"name": "Filtres à Nez",
 			"description": "Filtres à Nez",
 			"price": 3
 		}
