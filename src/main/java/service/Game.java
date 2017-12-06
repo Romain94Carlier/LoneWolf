@@ -65,4 +65,8 @@ public class Game {
 		return pageService.getPageNumber();
 	}
 
+	public boolean hasShop() {
+		return pageService.hasItemsToBuy();
+	}
+
 }

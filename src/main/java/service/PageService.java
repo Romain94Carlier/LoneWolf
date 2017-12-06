@@ -39,6 +39,10 @@ public class PageService {
 	public int getPageNumber() {
 		return currentPage.getNumber();
 	}
+
+	public boolean hasItemsToBuy() {
+		return this.currentPage.getItemsToBuy().length != 0;
+	}
 	
 //	public void setPageRepository(PageRepository pageRepository) {
 //		this.pageRepository = pageRepository;

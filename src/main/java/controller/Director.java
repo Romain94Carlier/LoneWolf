@@ -30,4 +30,7 @@ public class Director {
 		return "welcome"; // refresh
 	}
 	
+	public boolean pageHasAShop() {
+		return Game.getInstance().hasShop();
+	}
 }

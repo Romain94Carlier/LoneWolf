@@ -66,10 +66,10 @@ function closeShop() {
 		Inventory
 		<button class="w3-button w3-teal w3-xlarge" onclick="openInventory()">☰</button>
 	</div>
-	<div>
+	<c:if test="{director.pageHasAShop()}">
 		Item shop
 		<button class="w3-button w3-teal w3-xlarge" onclick="openShop()">☰</button>
-	</div>
+	</c:if>
 
 	</header> <!-- 		</table> --> <!-- 	<p /> --> <nav class="nav">
 	#{director.getMainDescription()} </nav> <!-- 		<article class="article"> -->
