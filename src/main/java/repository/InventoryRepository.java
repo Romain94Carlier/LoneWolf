@@ -13,6 +13,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import main.java.model.InventoryItem;
+import main.java.model.InventoryItemFactory;
+import main.java.model.InventoryItemFactory.InventoryItemBuilder;
 import main.java.model.PageOption;
 import main.java.model.Weapon;
 
@@ -30,6 +32,8 @@ public class InventoryRepository {
 	}
 
 	public void loadStartInventory() {
+		InventoryItemBuilder provisionBuilder = InventoryItemFactory.createInventoryItemBuilder();
+		items.add(provisionBuilder.name("Provisions").description("Eating provisions recovers 4 stamina points").quantity(10).build());
 		String uri = "";
 			String stringContent = "";
 			try {

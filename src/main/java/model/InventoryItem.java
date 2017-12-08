@@ -5,6 +5,8 @@ public class InventoryItem {
 	private String name;
 	private int price;
 	private String description;
+	private int quantity;
+	
 	public String getDescription() {
 		return description;
 	}
@@ -22,5 +24,11 @@ public class InventoryItem {
 	}
 	public void setPrice(int price) {
 		this.price = price;
+	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int i) {
+		this.quantity = 10;
 	}
 }

@@ -1,5 +1,7 @@
 package main.java.model;
 
+import main.java.model.InventoryItemFactory.InventoryItemBuilder;
+
 public class InventoryItemFactory {
 	
 	public static InventoryItemBuilder createInventoryItemBuilder() {
@@ -10,6 +12,7 @@ public class InventoryItemFactory {
 		private String name;
 		private int price;
 		private String description;
+		private int quantity;
 		public InventoryItemBuilder name(String name) {
 			this.name = name;
 			return this;
@@ -22,12 +25,18 @@ public class InventoryItemFactory {
 			this.price = price;
 			return this;
 		}
+		public InventoryItemBuilder quantity(int quantity) {
+			this.quantity = quantity;
+			return null;
+		}
 		public InventoryItem build() {
 			InventoryItem item = new InventoryItem();
 			item.setDescription(description);
 			item.setName(name);
 			item.setPrice(price);
+			item.setQuantity(quantity);
 			return item;
 		}
+		
 	}
 }
