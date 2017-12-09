@@ -27,7 +27,7 @@ public class InventoryItemFactory {
 		}
 		public InventoryItemBuilder quantity(int quantity) {
 			this.quantity = quantity;
-			return null;
+			return this;
 		}
 		public InventoryItem build() {
 			InventoryItem item = new InventoryItem();
