@@ -35,9 +35,9 @@ function closeShop() {
 		<button onclick="closeInventory()" class="w3-bar-item w3-large">Close
 			&times;</button>
 		<a href="#" class="w3-bar-item w3-button">Link 1</a>
-		<c:forEach items="#{director.getOptions()}" var="option">
+		<c:forEach items="#{director.getInventoryItems()}" var="item">
 		
-			<option value="#{option.getDescription()}" class="w3-bar-item w3-button">#{option.getDescription()}</option>
+			<option value="#{item.toString()}" class="w3-bar-item w3-button">#{item.toString()}</option>
 		</c:forEach>
 	</div>
 	<div class="w3-sidebar-right w3-bar-block w3-border-right"
