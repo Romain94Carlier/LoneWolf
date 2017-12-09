@@ -1,5 +1,6 @@
 package main.java.service;
 
+import main.java.model.InventoryItem;
 import main.java.model.PageOption;
 import main.java.model.Player;
 
@@ -8,6 +9,7 @@ public class Game {
 	private static Game instance = new Game();
 	private PageService pageService;
 	private DiceService diceService;
+	private InventoryService inventoryService;
 	private final Player player;
 
 	public static Game getInstance() {
@@ -20,6 +22,7 @@ public class Game {
 
 	private Game() {
 		pageService = new PageService();
+		inventoryService = new InventoryService();
 		diceService = new DiceService();
 		int skill = diceService.roll1Dice6Sides() + 6;
 		int stamina = diceService.roll1Dice6Sides() + diceService.roll1Dice6Sides() + 12;
@@ -67,6 +70,10 @@ public class Game {
 
 	public boolean hasShop() {
 		return pageService.hasItemsToBuy();
+	}
+
+	public InventoryItem[] getInventoryItems() {
+		return inventoryService.getItems();
 	}
 
 }

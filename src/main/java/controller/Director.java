@@ -1,6 +1,7 @@
 package main.java.controller;
 import javax.faces.bean.ManagedBean;
 
+import main.java.model.InventoryItem;
 import main.java.model.PageOption;
 import main.java.service.Game;
 
@@ -32,5 +33,9 @@ public class Director {
 	
 	public boolean pageHasAShop() {
 		return Game.getInstance().hasShop();
+	}
+	
+	public InventoryItem[] getInventoryItems() {
+		return Game.getInstance().getInventoryItems();
 	}
 }
