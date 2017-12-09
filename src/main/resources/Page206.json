@@ -1,0 +1,17 @@
+{
+   "pageNumber" : 206,
+   "mainDescription": 	"Soudain, vous entendez des appels au secours qui viennent de votre gauche, à l'écart du chemin. ",
+    "pageOptions": [
+         {
+              "pageOptionNumber": 253,
+              "pageOptionDescription": "Si vous souhaitez venir en aide à la personne qui appelle ainsi, rendez-vous au "
+         },
+		 {
+              "pageOptionNumber": 187,
+              "pageOptionDescription": "Si vous préférez rester indifférent à ces cris et poursuivre votre chemin vers le nord, rendez-vous au "
+         }
+    ],
+	"monsters": [],
+	"itemsFound": [],
+	"itemsToBuy": []
+}
