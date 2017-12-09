@@ -34,7 +34,6 @@ function closeShop() {
 		style="display: none" id="inventorySidebar">
 		<button onclick="closeInventory()" class="w3-bar-item w3-large">Close
 			&times;</button>
-		<a href="#" class="w3-bar-item w3-button">Link 1</a>
 		<c:forEach items="#{director.getInventoryItems()}" var="item">
 		
 			<option value="#{item.toString()}" class="w3-bar-item w3-button">#{item.toString()}</option>
@@ -44,11 +43,18 @@ function closeShop() {
 		style="display: none" id="shopSidebar">
 		<button onclick="closeShop()" class="w3-bar-item w3-large">Close
 			&times;</button>
-		<a href="#" class="w3-bar-item w3-button">Link 1</a>
-		<c:forEach items="#{director.getOptions()}" var="option">
-		
-			<option value="#{option.getDescription()}" class="w3-bar-item w3-button">#{option.getDescription()}</option>
-		</c:forEach>
+<!-- 		<c:forEach items="#{director.getOptions()}" var="option"> -->
+<!-- 			<option value="#{option.getDescription()}" class="w3-bar-item w3-button">#{option.getDescription()}</option> -->
+<!-- 		</c:forEach> -->
+		<c:forEach items="#{director.getInventoryItems()}" var="item" varStatus="metadata">
+<!-- 			<option class="w3-bar-item w3-button"> -->
+				<h:form>
+						<h:commandButton class="w3-bar-item w3-button" value="#{item.toString()}" action="#{director.buyItem(item)}">
+<!-- 							#{item.toString()} -->
+						</h:commandButton>
+					</h:form>
+<!-- 				</option> -->
+			</c:forEach>
 	</div>
 
 	<!-- Page Content -->

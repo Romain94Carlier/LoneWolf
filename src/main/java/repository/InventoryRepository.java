@@ -22,6 +22,7 @@ public class InventoryRepository {
 	
 	private static InventoryRepository instance = new InventoryRepository();
 	private List<InventoryItem> items = new ArrayList<>();
+	private int gold = 0;
 //	private String projectFolder = "C:/Users/User/git/LoneWolf/";
 	
 	private InventoryRepository() {
@@ -38,5 +39,13 @@ public class InventoryRepository {
 
 	public InventoryItem[] getItems() {
 		return items.toArray(new InventoryItem[items.size()]);
+	}
+
+	public void spendGold(int price) {
+		this.gold  -= price;
+	}
+
+	public void addToInventory(InventoryItem item) {
+		this.items.add(item);
 	}
 }

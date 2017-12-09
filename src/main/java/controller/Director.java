@@ -38,4 +38,9 @@ public class Director {
 	public InventoryItem[] getInventoryItems() {
 		return Game.getInstance().getInventoryItems();
 	}
+	
+	public String buyItem(InventoryItem item) {
+		Game.getInstance().buyItem(item);
+		return "welcome"; // refresh
+	}
 }

@@ -76,4 +76,8 @@ public class Game {
 		return inventoryService.getItems();
 	}
 
+	public void buyItem(InventoryItem item) {
+		inventoryService.buyItem(item);
+	}
+
 }

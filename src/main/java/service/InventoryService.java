@@ -20,4 +20,9 @@ public class InventoryService {
 	public InventoryItem[] getItems() {
 		return inventoryRepository.getItems();
 	}
+
+	public void buyItem(InventoryItem item) {
+		inventoryRepository.addToInventory(item);
+		inventoryRepository.spendGold(item.getPrice());
+	}
 }
