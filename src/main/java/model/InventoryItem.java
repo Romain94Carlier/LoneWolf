@@ -31,4 +31,10 @@ public class InventoryItem {
 	public void setQuantity(int i) {
 		this.quantity = 10;
 	}
+	public String toString() {
+		String result = name;
+		if(quantity > 0)
+			result += " ("+quantity+")";
+		return result;
+	}
 }
