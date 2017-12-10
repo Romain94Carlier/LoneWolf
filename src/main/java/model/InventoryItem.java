@@ -29,7 +29,7 @@ public class InventoryItem {
 		return quantity;
 	}
 	public void setQuantity(int i) {
-		this.quantity = 10;
+		this.quantity = i;
 	}
 	public String toString() {
 		String result = name;

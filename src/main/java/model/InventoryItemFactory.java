@@ -1,7 +1,5 @@
 package main.java.model;
 
-import main.java.model.InventoryItemFactory.InventoryItemBuilder;
-
 public class InventoryItemFactory {
 	
 	public static InventoryItemBuilder createInventoryItemBuilder() {
