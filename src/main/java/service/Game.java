@@ -82,6 +82,7 @@ public class Game {
 
 	public void buyItem(InventoryItem item) {
 		inventoryService.buyItem(item);
+		pageService.removeItem(item);
 	}
 
 }

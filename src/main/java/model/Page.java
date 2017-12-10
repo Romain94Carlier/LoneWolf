@@ -1,5 +1,8 @@
 package main.java.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public /*abstract*/ class Page {
 
 	private int number;
@@ -49,5 +52,13 @@ public /*abstract*/ class Page {
 
 	public InventoryItem[] getItemsToBuy() {
 		return itemsToBuy;
+	}
+
+	public void removeItem(InventoryItem item) {
+		List<InventoryItem> result = new ArrayList<>();
+		for(InventoryItem itemToBuy : this.itemsToBuy)
+			if(!itemToBuy.equals(item))
+				result.add(itemToBuy);
+		this.itemsToBuy = result.toArray(new InventoryItem[result.size()]);
 	}
 }

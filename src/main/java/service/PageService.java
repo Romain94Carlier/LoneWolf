@@ -48,6 +48,10 @@ public class PageService {
 	public InventoryItem[] getItemsToBuy() {
 		return this.currentPage.getItemsToBuy();
 	}
+
+	public void removeItem(InventoryItem item) {
+		this.currentPage.removeItem(item);
+	}
 	
 //	public void setPageRepository(PageRepository pageRepository) {
 //		this.pageRepository = pageRepository;
