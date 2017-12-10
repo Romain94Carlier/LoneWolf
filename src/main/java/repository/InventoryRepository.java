@@ -48,4 +48,8 @@ public class InventoryRepository {
 	public void addToInventory(InventoryItem item) {
 		this.items.add(item);
 	}
+
+	public int getGold() {
+		return gold;
+	}
 }

@@ -84,5 +84,8 @@ public class Game {
 		inventoryService.buyItem(item);
 		pageService.removeItem(item);
 	}
-
+	
+	public int getCurrentGold() {
+		return inventoryService.getGold();
+	}
 }

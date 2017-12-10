@@ -34,6 +34,9 @@ function closeShop() {
 		style="display: none" id="inventorySidebar">
 		<button onclick="closeInventory()" class="w3-bar-item w3-large">Close
 			&times;</button>
+		<option class="w3-bar-item">
+			Gold: #{director.getCurrentGold()}
+		</option>
 		<c:forEach items="#{director.getInventoryItems()}" var="item">
 		
 			<option value="#{item.toString()}" class="w3-bar-item w3-button">#{item.toString()}</option>
@@ -43,6 +46,7 @@ function closeShop() {
 		style="display: none" id="shopSidebar">
 		<button onclick="closeShop()" class="w3-bar-item w3-large">Close
 			&times;</button>
+		
 <!-- 		<c:forEach items="#{director.getOptions()}" var="option"> -->
 <!-- 			<option value="#{option.getDescription()}" class="w3-bar-item w3-button">#{option.getDescription()}</option> -->
 <!-- 		</c:forEach> -->

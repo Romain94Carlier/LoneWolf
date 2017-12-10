@@ -47,4 +47,8 @@ public class Director {
 		Game.getInstance().buyItem(item);
 		return "welcome"; // refresh
 	}
+	
+	public int getCurrentGold() {
+		return Game.getInstance().getCurrentGold();
+	}
 }

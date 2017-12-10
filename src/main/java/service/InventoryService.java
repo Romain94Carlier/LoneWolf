@@ -25,4 +25,8 @@ public class InventoryService {
 		inventoryRepository.addToInventory(item);
 		inventoryRepository.spendGold(item.getPrice());
 	}
+
+	public int getGold() {
+		return inventoryRepository.getGold();
+	}
 }
