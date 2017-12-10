@@ -1,5 +1,6 @@
 package main.java.service;
 
+import main.java.model.InventoryItem;
 import main.java.model.Page;
 import main.java.model.PageOption;
 import main.java.repository.PageRepository;
@@ -42,6 +43,10 @@ public class PageService {
 
 	public boolean hasItemsToBuy() {
 		return this.currentPage.getItemsToBuy().length != 0;
+	}
+	
+	public InventoryItem[] getItemsToBuy() {
+		return this.currentPage.getItemsToBuy();
 	}
 	
 //	public void setPageRepository(PageRepository pageRepository) {

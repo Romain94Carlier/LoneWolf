@@ -75,6 +75,10 @@ public class Game {
 	public InventoryItem[] getInventoryItems() {
 		return inventoryService.getItems();
 	}
+	
+	public InventoryItem[] getItemsToBuy() {
+		return pageService.getItemsToBuy();
+	}
 
 	public void buyItem(InventoryItem item) {
 		inventoryService.buyItem(item);
