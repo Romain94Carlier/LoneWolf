@@ -37,4 +37,10 @@ public class InventoryItem {
 			result += " ("+quantity+")";
 		return result;
 	}
+	public String toShopString() {
+		String result = name;
+		if(price > 0)
+			result += " ("+price+")";
+		return result;
+	}
 }

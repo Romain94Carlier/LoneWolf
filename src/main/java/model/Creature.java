@@ -3,6 +3,7 @@ package main.java.model;
 public abstract class Creature {
 	
 	private int stamina;
+	private final int staminaMax;
 	private int skill;
 	private String name;
 	private String description;
@@ -12,10 +13,17 @@ public abstract class Creature {
 		this.setDescription(description);
 		this.stamina = stamina;
 		this.skill = skill;
+		this.staminaMax = stamina;
 	}
 	
 	public int getStamina() {
 		return stamina;
+	}
+	
+	public void recoverStamina(int i) {
+		this.stamina += i;
+		if(stamina > staminaMax)
+			stamina = staminaMax;
 	}
 //	public void setHealth(int health) {
 //		this.health = health;

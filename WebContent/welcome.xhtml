@@ -53,7 +53,7 @@ function closeShop() {
 		<c:forEach items="#{director.getItemsToBuy()}" var="item" varStatus="metadata">
 <!-- 			<option class="w3-bar-item w3-button"> -->
 				<h:form>
-						<h:commandButton class="w3-bar-item w3-button" value="#{item.toString()}" action="#{director.buyItem(item)}">
+						<h:commandButton class="w3-bar-item w3-button" value="#{item.toShopString()}" action="#{director.buyItem(item)}">
 <!-- 							#{item.toString()} -->
 						</h:commandButton>
 					</h:form>

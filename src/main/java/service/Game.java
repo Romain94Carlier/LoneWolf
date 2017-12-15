@@ -88,4 +88,8 @@ public class Game {
 	public int getCurrentGold() {
 		return inventoryService.getGold();
 	}
+
+	public Player getPlayer() {
+		return this.player;
+	}
 }

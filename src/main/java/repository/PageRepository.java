@@ -30,7 +30,12 @@ public class PageRepository {
 	private Page[] pages = new Page[400];
 	private static PageRepository instance = new PageRepository();
 	private String projectFolder = "C:/Users/User/git/LoneWolf/";
-	private int[] supportedPages = {1, 54, 177, 181, 260, 261, 289, 303, 399};
+	private int[] supportedPages = {
+			1, 36, 54, 76, 
+			177, 181, 187, 
+			206, 253, 260, 261, 289, 
+			303, 344, 399
+			};
 
 	private PageRepository() {
 		for(int i : supportedPages)
