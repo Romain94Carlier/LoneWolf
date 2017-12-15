@@ -1,0 +1,21 @@
+{
+   "pageNumber" : 187,
+   "mainDescription": 	"En cheminant le long du sentier sinueux, vous apercevez bientôt une petite créature au corps noueux et à la peau brune et écailleuse. Elle est assise sur un tronc d'arbre mort à la droite du chemin, et son visage paraît maussade tandis qu'elle balance lentement entre ses doigts un bâton d'un noir brillant accroché à une lanière de cuir. C'est peut-être l'un des Gobelins que vous cherchez. Qu'allez-vous faire?",
+    "pageOptions": [
+         {
+              "pageOptionNumber": 286,
+              "pageOptionDescription": "Tirer votre épée et attaquer le Gobelin? Rendez-vous au "
+         },
+		 {
+              "pageOptionNumber": 203,
+              "pageOptionDescription": "Engager la conversation avec lui? Rendez-vous au "
+         },
+		 {
+              "pageOptionNumber": 6,
+              "pageOptionDescription": "Ne pas vous en occuper et poursuivre votre chemin vers le nord? Rendez-vous au "
+         }
+    ],
+	"monsters": [],
+	"itemsFound": [],
+	"itemsToBuy": []
+}

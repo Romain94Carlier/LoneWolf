@@ -1,0 +1,17 @@
+{
+   "pageNumber" : 253,
+   "mainDescription": 	"Vous vous dirigez vers l'endroit d'où proviennent les cris, en marchant difficilement parmi les racines noueuses des arbres, et vous apercevez bientôt un homme vêtu d'une djellaba de couleur foncée, le pied emprisonné dans un piège à loup tout rouillé. L'homme a le visage masqué par un pan de son vêtement, et l'on ne peut voir que ses yeux sombres.",
+    "pageOptions": [
+         {
+              "pageOptionNumber": 344,
+              "pageOptionDescription": "Si vous souhaitez aider cet homme en le libérant du piège, rendez-vous au "
+         },
+		 {
+              "pageOptionNumber": 187,
+              "pageOptionDescription": "Si vous préférez le laisser là sans lui porter secours, retournez sur le chemin, et repartez vers le nord. Rendez-vous au "
+         }
+    ],
+	"monsters": [],
+	"itemsFound": [],
+	"itemsToBuy": []
+}

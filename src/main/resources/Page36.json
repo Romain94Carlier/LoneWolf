@@ -1,0 +1,13 @@
+{
+   "pageNumber" : 36,
+   "mainDescription": 	"Vous repensez à cet étranger et vous éprouvez en même temps un sentiment de malaise. Quelque chose dans ses manières a éveillé votre méfiance. Vous vous arretez un instant pour vérifier le contenu de votre sac à dos et vous êtes alors furieux de constater qu'il y manque quelque chose. Cet homme était un voleur! Vous allez devoir soustraire de vos biens de vos biens soit toutes les pièces d'or qui vous restent, soit deux des objets magiques que vous avez achetés à Yaztromo. Votre inventaire est modifié en conséquence. Vous vous demandez si vous ne feriez pas mieux de courir après votre voleur, mais vous vous doutez qu'il n'est certainement pas parti dans la direction où il prétendait aller. Il ne vous reste donc plus qu'à le maudire et à poursuivre votre chemin vers le nord.",
+    "pageOptions": [
+         {
+              "pageOptionNumber": 187,
+              "pageOptionDescription": "Rendez-vous au "
+         }
+    ],
+	"monsters": [],
+	"itemsFound": [],
+	"itemsToBuy": []
+}

@@ -1,0 +1,13 @@
+{
+   "pageNumber" : 344,
+   "mainDescription": 	"Vous glissez la lame de votre épée entre les mâchoires du piège et vous vous en servez pour faire levier. L'étranger vêtu de la djellaba vous aide en tirant de toutes ses forces, et le piège finit par s'ouvrir. L'homme se confond en remerciements et vous raconte qu'il parcourt cette forêt à la recherche de son frère depuis longtemps disparu, et dont il soupçonne qu'il d'est retiré quelque part en ces lieux pour y mener une vie d'ermite. Vous vous frayez tous deux un chemin parmi les racines enchevêtrées pour rejoindre le sentier, puis vous demandez à l'étranger s'il veut vous accompagner en direction du nord; mais il décline poliment votre invitation en déclarant que son frère, selon lui, a plutôt du s'établir au sud. Vous vous serrez donc la main et vous prenez congé.",
+    "pageOptions": [
+         {
+              "pageOptionNumber": 36,
+              "pageOptionDescription": "Rendez-vous au "
+         }
+    ],
+	"monsters": [],
+	"itemsFound": [],
+	"itemsToBuy": []
+}
