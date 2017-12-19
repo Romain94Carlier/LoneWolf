@@ -6,12 +6,14 @@ import main.java.model.Player;
 public class FightService {
 	
 	private DiceService dice = new DiceService();
+	private Monster[] monsters;
 	
-	public FightService() {
+	public FightService(Monster[] monsters) {
 //		currentPage = new WelcomePage(
 //				new PageOption(2, "Take left"), 
 //				new PageOption(46, "Go straight"), 
 //				new PageOption(123, "Take right"));
+		this.monsters = monsters;
 	}
 	
 	public void playFight(Player player, Monster monster) {
@@ -36,5 +38,13 @@ public class FightService {
 		boolean result = roll >= player.getSkill(); 	//TODO
 		//player.useLuck();
 		return result;
+	}
+
+	public boolean isMonsterAlive() {
+		for(Monster monster : monsters) {
+			if(monster.isAlive())
+				return true;
+		}
+		return false;
 	}
 }

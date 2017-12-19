@@ -61,4 +61,8 @@ public /*abstract*/ class Page {
 				result.add(itemToBuy);
 		this.itemsToBuy = result.toArray(new InventoryItem[result.size()]);
 	}
+
+	public boolean hasMonster() {
+		return this.monsters.length > 0;
+	}
 }

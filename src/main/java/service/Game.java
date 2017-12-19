@@ -10,6 +10,7 @@ public class Game {
 	private PageService pageService;
 	private DiceService diceService;
 	private InventoryService inventoryService;
+	private FightService fightService;
 	private final Player player;
 
 	public static Game getInstance() {
@@ -91,5 +92,15 @@ public class Game {
 
 	public Player getPlayer() {
 		return this.player;
+	}
+	
+	public boolean hasMonsterToFight() {
+		if(pageService.pageHasMonster())
+			return true;
+		return fightService.isMonsterAlive();
+	}
+	
+	public void encounterMonster() {
+		fightService = new FightService(pageService.getMonsters());
 	}
 }

@@ -1,6 +1,7 @@
 package main.java.service;
 
 import main.java.model.InventoryItem;
+import main.java.model.Monster;
 import main.java.model.Page;
 import main.java.model.PageOption;
 import main.java.repository.PageRepository;
@@ -56,4 +57,12 @@ public class PageService {
 //	public void setPageRepository(PageRepository pageRepository) {
 //		this.pageRepository = pageRepository;
 //	}
+	
+	public boolean pageHasMonster() {
+		return this.currentPage.hasMonster();
+	}
+
+	public Monster[] getMonsters() {
+		return this.currentPage.getMonsters();
+	}
 }
