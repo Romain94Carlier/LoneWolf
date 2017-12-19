@@ -1,0 +1,17 @@
+{
+   "pageNumber" : 373,
+   "mainDescription": 	"Vous vous laissez tomber sur le tronc mort, épuisé par ce long combat. Hélas! le bâton noir n'était qu'une illusion créée par le Changeur de Forme, et vous n'en voyez plus trace. Un instant plus tard, vous remarquez, derrière le tronc, quelques champignons violets qui ont poussé là. Vous n'en avez jamais vu de semblables, mais ils semblent appétissants.",
+    "pageOptions": [
+         {
+              "pageOptionNumber": 308,
+              "pageOptionDescription": "Si vous souhaitez goûter à ces champignons, rendez-vous au "
+         },
+		 {
+              "pageOptionNumber": 148,
+              "pageOptionDescription": "Si vous préférez repartir vers le nord, rendez-vous au "
+         }
+    ],
+	"monsters": [],
+	"itemsFound": [],
+	"itemsToBuy": []
+}

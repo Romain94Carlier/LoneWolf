@@ -1,0 +1,13 @@
+{
+   "pageNumber" : 308,
+   "mainDescription": 	"En mangeant les champignons, vous ressentez une grande agitation dans tout votre corps, et vous pensez aussitôt que vous êtes peut-être en train de devenir vous-même un Changeur de Forme! Bientôt, cependant, vous êtes soulagé de sentir cette agitation s'apaiser puis disparaître; vous n'êtes pas devenu un Changeur de Forme, mais vous avez mangé des Champignons Brouilleurs et votre total d'Habileté va maintenant remplacer votre total de Chance et inversement, c'est-à-dire que les deux chiffres respectifs sont intervertis. Vous vous sentez un peu bizarre à présent, mais vous repartez malgré tout en direction du nord.",
+    "pageOptions": [
+         {
+              "pageOptionNumber": 148,
+              "pageOptionDescription": "Rendez-vous au "
+         }
+    ],
+	"monsters": [],
+	"itemsFound": [],
+	"itemsToBuy": []
+}

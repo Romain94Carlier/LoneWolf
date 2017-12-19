@@ -1,0 +1,20 @@
+{
+   "pageNumber" : 286,
+   "mainDescription": 	"Lorsque vous levez votre épée pour porter le premier coup, la créature commence à se métamorphoser sous vos yeux. Elle grandit et sa peau devient verdâtre, puis une longue queue épineuse lui pousse dans le dos ; ses bras enfin s'épaississent et des griffes acérées se déploient au bout de ses mains. Son visage également se déforme, prenant une apparence reptilienne avec des yeux rouges et une large gueule aux mâchoires plantées de dizaine de dents tranchantes comme des rasoirs. Ce n'est pas un Gobelin, en fait, mais un Changeur de Forme et il vous faut le combattre.",
+    "pageOptions": [
+         {
+              "pageOptionNumber": 373,
+              "pageOptionDescription": "Si vous êtes vainqueur, rendez-vous au "
+         }
+    ],
+	"monsters": [
+		{
+			"name": "Changeur de Forme",
+			"skill": 10,
+			"stamina": 10,
+			"description": ""
+		}
+	],
+	"itemsFound": [],
+	"itemsToBuy": []
+}
