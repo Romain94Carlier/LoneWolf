@@ -51,4 +51,8 @@ public class Director {
 	public int getCurrentGold() {
 		return Game.getInstance().getCurrentGold();
 	}
+	
+	public boolean pageHasMonster() {
+		return Game.getInstance().hasMonsterToFight();
+	}
 }

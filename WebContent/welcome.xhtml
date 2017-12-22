@@ -96,10 +96,12 @@ function closeShop() {
 		<tr>
 			<c:forEach items="#{director.getOptions()}" var="option"
 				varStatus="metadata">
-				<td><h:form>
+				<c:if test="#{!director.pageHasMonster()}">
+					<td><h:form>
 						<h:commandButton value="#{option.getPage()}"
 							action="#{director.selectOption(option)}" />
 					</h:form></td>
+				</c:if>
 			</c:forEach>
 		</tr>
 	</table>

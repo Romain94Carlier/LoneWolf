@@ -95,9 +95,9 @@ public class Game {
 	}
 	
 	public boolean hasMonsterToFight() {
-		if(pageService.pageHasMonster())
-			return true;
-		return fightService.isMonsterAlive();
+		if(!pageService.pageHasMonster())
+			return false;
+		return fightService == null || fightService.isMonsterAlive();
 	}
 	
 	public void encounterMonster() {
