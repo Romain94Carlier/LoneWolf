@@ -47,4 +47,12 @@ public class FightService {
 		}
 		return false;
 	}
+
+	public boolean isFleeingAllowed() {
+		for(Monster monster : monsters) {
+			if(!monster.isFlee())
+				return false;
+		}
+		return true;
+	}
 }

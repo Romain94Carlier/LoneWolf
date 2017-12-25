@@ -12,7 +12,8 @@
 			"name": "Changeur de Forme",
 			"skill": 10,
 			"stamina": 10,
-			"description": ""
+			"description": "",
+			"flee": false,
 		}
 	],
 	"itemsFound": [],

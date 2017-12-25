@@ -33,8 +33,8 @@ public class PageRepository {
 	private int[] supportedPages = {
 			1, 36, 54, 76, 
 			177, 181, 187, 
-			206, 253, 260, 261, 289, 
-			303, 344, 399
+			206, 253, 260, 261, 286, 289, 
+			303, 344, 373, 399
 			};
 
 	private PageRepository() {

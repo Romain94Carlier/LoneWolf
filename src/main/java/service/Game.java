@@ -97,10 +97,15 @@ public class Game {
 	public boolean hasMonsterToFight() {
 		if(!pageService.pageHasMonster())
 			return false;
-		return fightService == null || fightService.isMonsterAlive();
+		encounterMonster();
+		return fightService.isMonsterAlive();
 	}
 	
 	public void encounterMonster() {
 		fightService = new FightService(pageService.getMonsters());
+	}
+
+	public boolean isFleeingAllowed() {
+		return fightService.isFleeingAllowed();
 	}
 }

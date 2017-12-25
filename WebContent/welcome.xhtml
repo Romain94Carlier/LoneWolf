@@ -10,35 +10,35 @@ D/xhtml1-transitional.dtd">
 	<link href="./css/styles.css" rel="stylesheet" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link href="./css/w3.css" rel="stylesheet" type="text/css" />
+	<link href="./css/popup.css" rel="stylesheet" type="text/css" />
 </h:head>
 <!-- <style> -->
 
 <!-- </style> -->
 <h:body>
 	<script>
-function openInventory() {
-    document.getElementById("inventorySidebar").style.display = "block";
-}
-function closeInventory() {
-    document.getElementById("inventorySidebar").style.display = "none";
-}
-function openShop() {
-    document.getElementById("shopSidebar").style.display = "block";
-}
-function closeShop() {
-    document.getElementById("shopSidebar").style.display = "none";
-}
-</script>
+		function openInventory() {
+			document.getElementById("inventorySidebar").style.display = "block";
+		}
+		function closeInventory() {
+			document.getElementById("inventorySidebar").style.display = "none";
+		}
+		function openShop() {
+			document.getElementById("shopSidebar").style.display = "block";
+		}
+		function closeShop() {
+			document.getElementById("shopSidebar").style.display = "none";
+		}
+	</script>
 	<!-- Sidebar -->
 	<div class="w3-sidebar-left w3-bar-block w3-border-right"
 		style="display: none" id="inventorySidebar">
 		<button onclick="closeInventory()" class="w3-bar-item w3-large">Close
 			&times;</button>
-		<option class="w3-bar-item">
-			Gold: #{director.getCurrentGold()}
-		</option>
+		<option class="w3-bar-item">Gold:
+			#{director.getCurrentGold()}</option>
 		<c:forEach items="#{director.getInventoryItems()}" var="item">
-		
+
 			<option value="#{item.toString()}" class="w3-bar-item w3-button">#{item.toString()}</option>
 		</c:forEach>
 	</div>
@@ -46,19 +46,21 @@ function closeShop() {
 		style="display: none" id="shopSidebar">
 		<button onclick="closeShop()" class="w3-bar-item w3-large">Close
 			&times;</button>
-		
-<!-- 		<c:forEach items="#{director.getOptions()}" var="option"> -->
-<!-- 			<option value="#{option.getDescription()}" class="w3-bar-item w3-button">#{option.getDescription()}</option> -->
-<!-- 		</c:forEach> -->
-		<c:forEach items="#{director.getItemsToBuy()}" var="item" varStatus="metadata">
-<!-- 			<option class="w3-bar-item w3-button"> -->
-				<h:form>
-						<h:commandButton class="w3-bar-item w3-button" value="#{item.toShopString()}" action="#{director.buyItem(item)}">
-<!-- 							#{item.toString()} -->
-						</h:commandButton>
-					</h:form>
-<!-- 				</option> -->
-			</c:forEach>
+
+		<!-- 		<c:forEach items="#{director.getOptions()}" var="option"> -->
+		<!-- 			<option value="#{option.getDescription()}" class="w3-bar-item w3-button">#{option.getDescription()}</option> -->
+		<!-- 		</c:forEach> -->
+		<c:forEach items="#{director.getItemsToBuy()}" var="item"
+			varStatus="metadata">
+			<!-- 			<option class="w3-bar-item w3-button"> -->
+			<h:form>
+				<h:commandButton class="w3-bar-item w3-button"
+					value="#{item.toShopString()}" action="#{director.buyItem(item)}">
+					<!-- 							#{item.toString()} -->
+				</h:commandButton>
+			</h:form>
+			<!-- 				</option> -->
+		</c:forEach>
 	</div>
 
 	<!-- Page Content -->
@@ -81,31 +83,56 @@ function closeShop() {
 			Item shop
 			<button class="w3-button w3-teal w3-xlarge" onclick="openShop()">☰</button>
 		</div>
-	</c:if>
-
-	</header> <!-- 		</table> --> <!-- 	<p /> --> <nav class="nav">
+	</c:if> </header> <!-- 		</table> --> <!-- 	<p /> --> <nav class="nav">
 	#{director.getMainDescription()} </nav> <!-- 		<article class="article"> -->
-	<footer class="footer">
-	<table>
+	<footer class="footer"> <c:if
+		test="#{!director.pageHasMonster()}">
+
+
+		<table>
+			<tr>
+				<c:forEach items="#{director.getOptions()}" var="option"
+					varStatus="metadata">
+					<td>#{option.getDescription()}</td>
+				</c:forEach>
+			</tr>
+			<tr>
+				<c:forEach items="#{director.getOptions()}" var="option"
+					varStatus="metadata">
+					<c:if test="#{!director.pageHasMonster()}">
+						<td><h:form>
+								<h:commandButton value="#{option.getPage()}"
+									action="#{director.selectOption(option)}" />
+							</h:form></td>
+					</c:if>
+				</c:forEach>
+			</tr>
+		</table>
+	</c:if> <c:if test="#{director.pageHasMonster()}">
+		<table>
 		<tr>
-			<c:forEach items="#{director.getOptions()}" var="option"
-				varStatus="metadata">
-				<td>#{option.getDescription()}</td>
-			</c:forEach>
+				<td>monster description</td>
 		</tr>
 		<tr>
-			<c:forEach items="#{director.getOptions()}" var="option"
-				varStatus="metadata">
-				<c:if test="#{!director.pageHasMonster()}">
 					<td><h:form>
-						<h:commandButton value="#{option.getPage()}"
-							action="#{director.selectOption(option)}" />
+						<h:commandButton value="fight" action="#{popupController.show()}" />
 					</h:form></td>
-				</c:if>
-			</c:forEach>
 		</tr>
 	</table>
-	</footer> </section>
+	</c:if> </footer> </section>
+	<h:panelGroup layout="block" styleClass="popup-panel-overlay" rendered="#{popupController.showPopup}">
+                <div class="popup-panel">
+                    This is popup panel<br/>
+                    This is popup panel<br/>
+                    This is popup panel<br/>
+                    This is popup panel<br/>
+                    This is popup panel<br/>
+                    <h:form>
+                    <h:commandButton value="hide details" action="#{popupController.hide()}">
+                    </h:commandButton>
+                    </h:form>
+                </div>
+            </h:panelGroup>
 </h:body>
 </html>
 

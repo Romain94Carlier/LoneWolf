@@ -55,4 +55,14 @@ public class Director {
 	public boolean pageHasMonster() {
 		return Game.getInstance().hasMonsterToFight();
 	}
+	
+	public void selectFight() {
+		
+	}
+	
+	public boolean isFleeingAllowed() {
+		if(!pageHasMonster())
+			return false;
+		return Game.getInstance().isFleeingAllowed();
+	}
 }
