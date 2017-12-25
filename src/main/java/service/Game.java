@@ -97,15 +97,26 @@ public class Game {
 	public boolean hasMonsterToFight() {
 		if(!pageService.pageHasMonster())
 			return false;
-		encounterMonster();
-		return fightService.isMonsterAlive();
+		return fightService == null || fightService.fightIsOngoing(); //fightService.isMonsterAlive();
 	}
 	
 	public void encounterMonster() {
-		fightService = new FightService(pageService.getMonsters());
+		fightService = new FightService(pageService.getMonsters(), player);
 	}
 
 	public boolean isFleeingAllowed() {
 		return fightService.isFleeingAllowed();
+	}
+
+	public void fightRound() {
+		fightService.playRound();
+	}
+	
+	public void fleeFight() throws IllegalAccessException {
+		fightService.flee();
+	}
+
+	public boolean fightIsOngoing() {
+		return fightService != null && fightService.fightIsOngoing();
 	}
 }

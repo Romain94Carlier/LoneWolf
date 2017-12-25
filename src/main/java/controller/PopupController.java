@@ -9,6 +9,8 @@ package main.java.controller;
 import java.io.Serializable;
 import javax.faces.bean.ManagedBean;
 
+import main.java.service.Game;
+
 /**
  *
  * @author Murad R. Imanbayli <muradimanbayli at gmail.com>
@@ -26,11 +28,13 @@ public class PopupController implements Serializable{
     }
 
     public boolean isShowPopup() {
-        return showPopup;
+//        return showPopup;
+    	return Game.getInstance().fightIsOngoing();
     }
 
     public void setShowPopup(boolean showPopup) {
         this.showPopup = showPopup;
+        throw new IllegalAccessError();
     }
     
 }

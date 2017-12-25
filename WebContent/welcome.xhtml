@@ -99,12 +99,12 @@ D/xhtml1-transitional.dtd">
 			<tr>
 				<c:forEach items="#{director.getOptions()}" var="option"
 					varStatus="metadata">
-					<c:if test="#{!director.pageHasMonster()}">
+<!-- 					<c:if test="#!{director.fightIsOngoing()}"> -->
 						<td><h:form>
 								<h:commandButton value="#{option.getPage()}"
 									action="#{director.selectOption(option)}" />
 							</h:form></td>
-					</c:if>
+<!-- 					</c:if> -->
 				</c:forEach>
 			</tr>
 		</table>
@@ -115,7 +115,7 @@ D/xhtml1-transitional.dtd">
 		</tr>
 		<tr>
 					<td><h:form>
-						<h:commandButton value="fight" action="#{popupController.show()}" />
+						<h:commandButton value="fight" action="#{director.selectFight()}" />
 					</h:form></td>
 		</tr>
 	</table>
@@ -123,13 +123,16 @@ D/xhtml1-transitional.dtd">
 	<h:panelGroup layout="block" styleClass="popup-panel-overlay" rendered="#{popupController.showPopup}">
                 <div class="popup-panel">
                     This is popup panel<br/>
-                    This is popup panel<br/>
-                    This is popup panel<br/>
-                    This is popup panel<br/>
-                    This is popup panel<br/>
+                    <table>
+                    <td><h:form>
+						<h:commandButton value="fight" action="#{director.fightRound()}" />
+					</h:form></td>
+					<td><h:form>
+						<h:commandButton value="flee" action="#{director.flee()}" />
+					</h:form></td>
+                    </table>
                     <h:form>
-                    <h:commandButton value="hide details" action="#{popupController.hide()}">
-                    </h:commandButton>
+                    <h:commandButton value="hide details" onClick="#{popupController.hide()}" />
                     </h:form>
                 </div>
             </h:panelGroup>

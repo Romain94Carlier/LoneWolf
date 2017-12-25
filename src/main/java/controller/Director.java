@@ -57,12 +57,24 @@ public class Director {
 	}
 	
 	public void selectFight() {
-		
+		Game.getInstance().encounterMonster();
+	}
+	
+	public void fightRound() {
+		Game.getInstance().fightRound();
 	}
 	
 	public boolean isFleeingAllowed() {
 		if(!pageHasMonster())
 			return false;
 		return Game.getInstance().isFleeingAllowed();
+	}
+	
+	public void flee() throws IllegalAccessException {
+		Game.getInstance().fleeFight();
+	}
+	
+	public boolean fightIsOngoing() {
+		return Game.getInstance().fightIsOngoing();
 	}
 }

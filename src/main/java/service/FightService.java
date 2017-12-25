@@ -7,13 +7,17 @@ public class FightService {
 	
 	private DiceService dice = new DiceService();
 	private Monster[] monsters;
+	private Player player;
+	private boolean hasFled = false;
+	private boolean hasStarted = true;
 	
-	public FightService(Monster[] monsters) {
+	public FightService(Monster[] monsters, Player player) {
 //		currentPage = new WelcomePage(
 //				new PageOption(2, "Take left"), 
 //				new PageOption(46, "Go straight"), 
 //				new PageOption(123, "Take right"));
 		this.monsters = monsters;
+		this.player = player;
 	}
 	
 	public void playFight(Player player, Monster monster) {
@@ -47,6 +51,10 @@ public class FightService {
 		}
 		return false;
 	}
+	
+	public boolean isFightOver() {
+		return hasFled || isFleeingAllowed();
+	}
 
 	public boolean isFleeingAllowed() {
 		for(Monster monster : monsters) {
@@ -54,5 +62,22 @@ public class FightService {
 				return false;
 		}
 		return true;
+	}
+
+	public void playRound() {
+		playRound(player, monsters[0]);	// TODO: many monsters?
+	}
+
+	public void flee() throws IllegalAccessException {
+		if(!isFleeingAllowed())
+			throw new IllegalAccessException("Fleeing isn't allowed on this page!");
+		player.dealDamage(2);
+		this.hasFled  = true;
+	}
+
+	public boolean fightIsOngoing() {
+		if(isFightOver())
+			return false;
+		return this.hasStarted ;
 	}
 }
