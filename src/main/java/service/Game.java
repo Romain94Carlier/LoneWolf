@@ -1,6 +1,7 @@
 package main.java.service;
 
 import main.java.model.InventoryItem;
+import main.java.model.Monster;
 import main.java.model.PageOption;
 import main.java.model.Player;
 
@@ -105,7 +106,7 @@ public class Game {
 	}
 
 	public boolean isFleeingAllowed() {
-		return fightService.isFleeingAllowed();
+		return fightService == null || fightService.isFleeingAllowed();
 	}
 
 	public void fightRound() {
@@ -118,5 +119,9 @@ public class Game {
 
 	public boolean fightIsOngoing() {
 		return fightService != null && fightService.fightIsOngoing();
+	}
+
+	public Monster getMonster() {
+		return fightService.getActiveMonster();
 	}
 }

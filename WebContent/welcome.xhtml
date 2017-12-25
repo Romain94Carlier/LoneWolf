@@ -122,14 +122,31 @@ D/xhtml1-transitional.dtd">
 	</c:if> </footer> </section>
 	<h:panelGroup layout="block" styleClass="popup-panel-overlay" rendered="#{popupController.showPopup}">
                 <div class="popup-panel">
-                    This is popup panel<br/>
+                <table>
+                
+                <tr>
+                <td>Player</td>
+                <td>Monster</td>
+                </tr>
+                <tr>
+                	<td>Skill: #{director.getPlayer().getSkill()}</td>
+                	<td>Skill: #{director.getMonster().getSkill()}</td>
+                </tr>
+                <tr>
+                	<td>Stamina: #{director.getPlayer().getStamina()}</td>
+                    <td>Stamina: #{director.getMonster().getStamina()}</td>
+                </tr>
+                </table>
+                <br/>
                     <table>
                     <td><h:form>
 						<h:commandButton value="fight" action="#{director.fightRound()}" />
 					</h:form></td>
+					<c:if test="#{director.isFleeingAllowed()}">
 					<td><h:form>
 						<h:commandButton value="flee" action="#{director.flee()}" />
 					</h:form></td>
+					</c:if>
                     </table>
                     <h:form>
                     <h:commandButton value="hide details" onClick="#{popupController.hide()}" />

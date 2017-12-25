@@ -80,4 +80,8 @@ public class FightService {
 			return false;
 		return this.hasStarted ;
 	}
+
+	public Monster getActiveMonster() {
+		return monsters[0];
+	}
 }

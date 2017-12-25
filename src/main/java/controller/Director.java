@@ -2,7 +2,9 @@ package main.java.controller;
 import javax.faces.bean.ManagedBean;
 
 import main.java.model.InventoryItem;
+import main.java.model.Monster;
 import main.java.model.PageOption;
+import main.java.model.Player;
 import main.java.service.Game;
 
 @ManagedBean
@@ -31,6 +33,10 @@ public class Director {
 		return "welcome"; // refresh
 	}
 	
+	public Player getPlayer() {
+		return Game.getInstance().getPlayer();
+	}
+	
 	public boolean pageHasAShop() {
 		return Game.getInstance().hasShop();
 	}
@@ -54,6 +60,10 @@ public class Director {
 	
 	public boolean pageHasMonster() {
 		return Game.getInstance().hasMonsterToFight();
+	}
+	
+	public Monster getMonster() {
+		return Game.getInstance().getMonster();
 	}
 	
 	public void selectFight() {

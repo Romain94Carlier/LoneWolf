@@ -90,17 +90,21 @@ td {
 }
 
 td:nth-child(1) {
-    background-color: #1111ff;
+    background-color: #1188ff;
+    text-align: center;
 }
 td:nth-child(2) {
-    background-color: #11ff11;
+    background-color: #118811;
     color: #ffffff;
+    text-align: center;
 }
 td:nth-child(3) {
     background-color: #ff1111;
+    text-align: center;
 }
 td:nth-child(4) {
     background-color: #dddddd;
+    text-align: center;
 }
 
 tr {
